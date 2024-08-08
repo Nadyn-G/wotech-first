@@ -1,0 +1,81 @@
+
+## DatoriumApiApplication.java
+```
+package com.datorium.Datorium.API;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.*;
+
+@SpringBootApplication
+@CrossOrigin
+public class DatoriumApiApplication {
+
+    public static void main(String[] args) {  // Only this should be here
+        System.out.println("asd");
+        SpringApplication.run(DatoriumApiApplication.class, args);
+    }
+}
+```
+package Controllers
+## UserController.java
+```
+package com.datorium.Datorium.API.Controllers;
+
+import com.datorium.Datorium.API.DTO.User;
+import com.datorium.Datorium.API.Services.UserService;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/user")
+public class UserController {
+    private UserService userService;
+    public UserController(){
+        userService = new UserService();
+    }
+    //CRUD
+    //AddUser
+    //UpdateUser
+    //GetUser
+    //DeleteUser
+
+    //@GetMapping
+    @PostMapping("/add") //localhost:8080/user/add
+    public int add(@RequestBody User user){
+        return userService.add(user);
+    }
+}
+```
+
+package DTO
+## Credentials.java
+```
+package com.datorium.Datorium.API.DTO;
+
+public class Credentials {
+    public String username;
+    public String password;
+}
+```
+User.java
+```
+package com.datorium.Datorium.API.DTO;
+
+public class User {
+    public String name;
+}
+```
+package Services
+## UserService.java
+```
+package com.datorium.Datorium.API.Services;
+
+import com.datorium.Datorium.API.DTO.User;
+
+public class UserService {
+
+    public int add(User user){
+        return 0;
+    }
+}
+```
+
