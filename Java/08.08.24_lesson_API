@@ -1,7 +1,6 @@
 
  DatoriumApiApplication.java
-```
-package com.datorium.Datorium.API;
+```package com.datorium.Datorium.API;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.*;
@@ -14,8 +13,8 @@ public class DatoriumApiApplication {
         System.out.println("asd");
         SpringApplication.run(DatoriumApiApplication.class, args);
     }
-}
-```
+}```
+
 package Controllers
 ## UserController.java
 ```
